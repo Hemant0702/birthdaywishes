@@ -58,7 +58,7 @@ export default function BirthdayApp() {
             ))}
           </div>
           <audio autoPlay loop>
-            <source src="/birthday_music.mp3" type="audio/mpeg" />
+            <source src={`${process.env.PUBLIC_URL}/birthday_music.mp3`} type="audio/mpeg" />
           </audio>
           <Button onClick={goToNext} className="mt-6 bg-yellow-500 hover:bg-yellow-600">
             Next
@@ -73,10 +73,10 @@ export default function BirthdayApp() {
           animate={{ y: 0, opacity: 1 }}
         >
           <h2 className="text-4xl font-bold text-pink-600 mb-4">🎂 Here's your cake!</h2>
-          <img src="cake.jpg" alt="Cake" className="mx-auto mb-4 w-64 animate-wiggle" />
+          <img src={`${process.env.PUBLIC_URL}/cake.jpg`} alt="Cake" className="mx-auto mb-4 w-64 animate-wiggle" />
           <div className="flex justify-center gap-4">
-          <img src="/doraemon.jpg" alt="Doraemon" className="w-32 animate-bounce" />
-          <img src="/shinchan.jpg" alt="Shinchan" className="w-32 animate-bounce delay-200" />
+          <img src={`${process.env.PUBLIC_URL}/doraemon.jpg`} alt="Doraemon" className="w-32 animate-bounce" />
+          <img src={`${process.env.PUBLIC_URL}/shinchan.jpg`} alt="Shinchan" className="w-32 animate-bounce delay-200" />
           </div>
           <Button onClick={goToNext} className="mt-6 bg-red-400 hover:bg-red-500">
             Next
@@ -97,7 +97,7 @@ export default function BirthdayApp() {
     
       <div className="flex-1 flex items-center justify-center max-h-[60vh]">
         <img
-          src="/bday_girl.jpg"
+          src={`${process.env.PUBLIC_URL}/bday_girl.jpg`}
           alt="Birthday Girl"
           className="max-h-full w-auto rounded-xl shadow-xl"
         />
